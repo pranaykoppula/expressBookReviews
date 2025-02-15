@@ -93,7 +93,7 @@ public_users.get('/author/:author',function (req, res) {
 // Get all books based on title
 public_users.get('/title/:title',function (req, res) {
   const title=req.params.title;
-  const myPromise=new Promise((resolve,rject)=>{
+  const myPromise=new Promise((resolve,reject)=>{
     let filtered_books=Object.values(books).filter((book)=>book.title===title);
     if(filtered_books){
       resolve(filtered_books);
